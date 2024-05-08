@@ -19,6 +19,35 @@ from langchain.memory import ConversationBufferMemory
 
 # ------------------------------------------------------------------------------------------------
 
+st.set_page_config(
+    page_title = "MeetingAPP",
+    page_icon = "📝"
+)
+
+st.title("MeetingAPP")
+
+st.markdown("""
+    안녕하세요. GPT Whisper 친구 **AI Kong**이에요. 
+    
+    비디오 파일을 업로드하면, 전사 텍스트(transcript)나 요약본을 제공해 드리거나
+    
+    내용에 대해 묻고 답할 수 있는 챗봇을 제공해 드려요.
+    
+    비디오 파일은 왼쪽 창에서 업로드 해주세요. 
+    
+            """)
+
+# ------------------------------------------------------------------------------------------------
+
+
+with st.sidebar:
+    st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
+
+OPENAI_API_KEY = st.session_state.api_key
+    
+
+# ------------------------------------------------------------------------------------------------
+
 
 class ChatCallbackHandler(BaseCallbackHandler): 
     
@@ -174,39 +203,11 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{question}")
     ])
 
+
+
 # ------------------------------------------------------------------------------------------------
  
 
-st.set_page_config(
-    page_title = "MeetingAPP",
-    page_icon = "📝"
-)
-
-st.title("MeetingAPP")
-
-st.markdown("""
-    안녕하세요. GPT Whisper 친구 **AI Kong**이에요. 
-    
-    비디오 파일을 업로드하면, 전사 텍스트(transcript)나 요약본을 제공해 드리거나
-    
-    내용에 대해 묻고 답할 수 있는 챗봇을 제공해 드려요.
-    
-    비디오 파일은 왼쪽 창에서 업로드 해주세요. 
-    
-            """)
-
-# ------------------------------------------------------------------------------------------------
-
-if "api_key" not in st.session_state:
-    st.warning("왼쪽 사이드바에서 당신의 OpenAI API Key를 입력해 주세요.")
-    
-    with st.sidebar:
-        st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
-else: 
-    openai_api_key = st.session_state.api_key
-    
-# ------------------------------------------------------------------------------------------------
- 
 with st.sidebar: 
     video = st.file_uploader("Video", type=["mp4", "avi", "mkv", "mov"])
     

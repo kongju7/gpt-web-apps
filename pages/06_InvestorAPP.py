@@ -28,8 +28,8 @@ st.markdown("""
     
     **[참고] 주식 정보를 호출하기 위해서는 Alphavantage와 Google API Key가 추가로 필요합니다.**
     
-    - [Alphavantage 사이트](https://www.alphavantage.co/support/#api-key)에서 API Key를 발급받고, 
-    - [Google ID 발급 사이트](https://programmablesearchengine.google.com/controlpanel/create)에서는 **검색 엔진 ID**와
+    - [Alphavantage 사이트](https://www.alphavantage.co/support/#api-key)에서 **API Key**를 발급받고, 
+    - [Google 검색 엔진 ID 발급 사이트](https://programmablesearchengine.google.com/controlpanel/create)에서는 **검색 엔진 ID**와
     - [Google API Key 발급 사이트](https://developers.google.com/custom-search/v1/introduction?hl=ko)에서는 **검색 엔진 API Key**를 모두 발급받아 왼쪽 창에 입력해 주세요.   
      
 
@@ -47,7 +47,7 @@ st.markdown("""
 
 with st.sidebar:
     st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
-openai_api_key = st.session_state.api_key
+OPENAI_API_KEY = st.session_state.api_key
 
 # ------------------------------------------------------------------------------------------------
 

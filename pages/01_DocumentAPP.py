@@ -25,7 +25,8 @@ st.set_page_config(
 
 with st.sidebar:
     st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
-openai_api_key = st.session_state.api_key
+
+OPENAI_API_KEY = st.session_state.api_key
 
 # ------------------------------------------------------------------------------------------------
 
@@ -51,7 +52,6 @@ with st.sidebar:
 # !pip install tabulate pdf2image pytesseract
 
 # ------------------------------------------------------------------------------------------------
-
 
 class ChatCallbackHandler(BaseCallbackHandler): 
     
