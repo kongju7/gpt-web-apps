@@ -37,17 +37,12 @@ st.markdown("""
     
             """)
 
-# openai_api_key = st.secrets["OPENAI_API_KEY"]
-# alphavantage_api_key = st.secrets["ALPHAVANTAGE_API_KEY"]
-# GOOGLE_CSE_ID = st.secrets["GOOGLE_CSE_ID"]
-# GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
-
 # ------------------------------------------------------------------------------------------------
 
 
 with st.sidebar:
     st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
-OPENAI_API_KEY = st.session_state.api_key
+openai_api_key = st.session_state.api_key
 
 # ------------------------------------------------------------------------------------------------
 
@@ -68,6 +63,7 @@ GOOGLE_API_KEY = st.session_state.GOOGLE_API_KEY
 
 llm = ChatOpenAI(
     temperature = 0.1,
+    api_key = openai_api_key, 
 )
 
 class StockMarketSymbolSearchToolArgsSchema(BaseModel):

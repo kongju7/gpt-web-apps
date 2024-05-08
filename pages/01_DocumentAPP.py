@@ -26,7 +26,7 @@ st.set_page_config(
 with st.sidebar:
     st.session_state.api_key = st.text_input("당신의 OpenAI API Key를 입력해 주세요.", type="password") 
 
-OPENAI_API_KEY = st.session_state.api_key
+openai_api_key = st.session_state.api_key
 
 # ------------------------------------------------------------------------------------------------
 
@@ -69,6 +69,7 @@ class ChatCallbackHandler(BaseCallbackHandler):
 
 llm = ChatOpenAI(
     temperature = 0.1, 
+    api_key = openai_api_key, 
     streaming = True,
     callbacks = [
         ChatCallbackHandler()
