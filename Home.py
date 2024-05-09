@@ -28,7 +28,7 @@ st.markdown(
 - <a href="/QuizAPP" target="_self">QuizAPP</a> : 문제 출제하고 맞추기 
 - <a href="/SiteAPP" target="_self">SiteAPP</a> : 사이트 톺아보기 
 - <a href="/MeetingAPP" target="_self">MeetingAPP</a> : **Whisper AI**를 활용한 비디오 음성인식 및 요약   
-- <a href="/InvestorAPP" target="_self">InvestorAPP</a> : 투자의견 제공    
+- <a href="/InvestorAPP" target="_self">InvestorAPP</a> : 기업의 재무 현황 및 주식 흐름 등을 검토하여 투자의견 제공 
 
 -----    
     
