@@ -16,8 +16,13 @@
         
         - **OpenAI API**(Application Programming Interface): OpenAI가 제공하는 대용량 언어 모델 API
             - API: 소프트웨어 애플리케이션끼리 서로 정보를 주고받기 위한 인터페이스 
-            - OpenAI API에서 제공하는 자연어 생성 모델인 GPT나 음성 인식 모델인 Whisper 등의 API를 활용하면 생성형  AI 애플리케이션을 별도의 인공지능 모델 구축 없이 구현 가능  
+            - OpenAI API에서 제공하는 자연어 생성 모델인 GPT나 음성 인식 모델인 Whisper 등의 API를 활용하면 생성형  AI 애플리케이션을 별도의 인공지능 모델 구축 없이 구현 가능
 
+        - **RAG**(Retrieval-Augmented Generation, 검색-증강 생성): 대규모 언어 모델의 출력을 최적화하여 응답을 생성하기 전에 학습 데이터 소스 외부의 신뢰할 수 있는 지식 베이스를 참조하도록 하는 프로세스
+            - LLM  모델이 학습하지 못한 최신의 데이터나 전문화된 데이터를 참조할 수 있도록 제공
+            - LLM 결과를 개선하여 다양한 상황에서 관련성, 정확성 및 유용성을 유지하는 비용 효율적 방법
+
+  
     - 생성형 AI 웹 애플리케이션 구성
         - **DocumentAPP** : 문서 기반 챗봇 
         - **SecureDocumentAPP** : 로컬 LLM을 활용한 보안문서 기반 챗봇
@@ -27,7 +32,7 @@
         - **InvestorAPP** : 기업의 재무 현황 및 주식 흐름 등을 검토하여 투자의견 제공
   
   
-2. 세부 구현    
+1. 세부 구현    
   
     - **DocumentAPP**
         - 문서 파일 업로드 
@@ -70,7 +75,7 @@
         - 투자 의견 반환
 
     
-3. 웹 배포   
+2. 웹 배포   
    
     - 웹 배포: Streamlit 라이브러리 활용
     - 사이트 바로가기: To be released soon 
