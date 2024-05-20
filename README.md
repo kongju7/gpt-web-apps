@@ -24,7 +24,7 @@
 
   
     - 생성형 AI 웹 애플리케이션 구성
-        - **DocumentAPP** : 문서 기반 챗봇 
+        - **DocumentAPP** : RAG 활용 문서 기반 챗봇 
         - **SecureDocumentAPP** : 로컬 LLM을 활용한 보안문서 기반 챗봇
         - **QuizAPP** : 문서 혹은 위키피디아 검색 기반 문제 출제하고 맞추기
         - **SiteAPP** : 사이트 내 텍스트 기반 질의 응답
