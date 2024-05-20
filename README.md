@@ -35,9 +35,9 @@
 1. 세부 구현    
   
     - **DocumentAPP**
-        - 문서 파일 업로드 
+        - RAG: LLM이 참조할 문서 파일 업로드
         - OpenAIEmbeddings()를 활용하여 문서 임베딩 → 캐싱해서 동일 문서는 재사용  
-        - FAISS 벡터스토어에 임베딩한 파일 저장 
+        - FAISS 벡터스토어(Vector Store)에 임베딩한 파일 저장
         - ChatOpenAI()를 활용하여 챗봇 형태로 문서 내용에 대해 묻고 답하기 
             - 대화 히스토리 저장 기능 포함
         
